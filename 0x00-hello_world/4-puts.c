@@ -1,11 +1,20 @@
-/*mulilingual puzzle*/
 #include<stdio.h>
+/**
+ * main - Entry point
+ * Description: prints "\"Programming is like building a multilingual puzzle"
+ * Return: 0
+ *
+ * Descriptions: This function prints a message to the console using the
+ *              puts() function.
+ *
+ * Returns: Always 0 (Success)
+*/
 int main(void)
 {
-/*string initialization*/
-char Mystr[] = "%Programming is like building a multilingual puzzle\n", ";
 
-puts(Mystr); /*printing the stdoutput*/
+char Mystr[] = "\"Programming is like building a multilingual puzzle\n";
+
+puts(Mystr);
 
 return (0);
 }
