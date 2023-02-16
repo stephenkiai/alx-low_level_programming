@@ -1,6 +1,7 @@
 #include<stdio.h>
-int main(void)
 {
+int main(void)
+
 /*string initialization*/
 char Mystr[] = "Programming is like building a multilingual puzzle\n;
 
