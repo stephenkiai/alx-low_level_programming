@@ -3,17 +3,16 @@
 #include <time.h>
 /**
  * main - assigns random number to n
- * return : 0 always (success)
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
-
 {
 int n;
 int lstdgt;
-
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-lstdgt = n % 10;
+lstdgt = n % 6;
 if (lstdgt > 5)
 {
 printf("Last digit of %d is %d and is greater than 5\n", n, lstdgt);
