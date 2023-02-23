@@ -1,3 +1,6 @@
+#include "main.h"
+#include <stdio.h>
+
 /**
  * _isupper - It takes one argument
  * @c: The character to be checked
