@@ -12,7 +12,7 @@ int num;
 
 for (num = 0; num < n; num++)
 {
-  _putchar('_');
+_putchar('_');
 }
 _putchar('\n');
 }
