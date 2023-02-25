@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c -o $CFILE $CFILE.s
+gcc -masm=intel $CFILE -S > $(echo $CFILE|cut -d"." -f1).s
