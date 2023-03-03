@@ -8,14 +8,13 @@
  */
 void reverse_array(int *a, int n)
 {
-  int i = 0; /*represents array elements indexes*/
-  int temp; /*store a copy of one of the values that is being swapped*/
+int i = 0;
+int j;
 
-  n= n - 1;
- while (i <= n)
-   {
-     temp = a[i];
-     a[i++] = a[n];
-     temp = a[n];
-   }
+for (i = 0; i < (n - 1) / 2; i++)
+{
+j = a[i];
+a[i] = a[n - 1 - i];
+a[n - 1 - i] = j;
+}
 }
