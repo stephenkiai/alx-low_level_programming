@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 * _strspn - return length of string that matches values
-* @s: string 
+* @s: string
 * @accept: target matches
 * Return: number of bytes consecutively matched
 */
