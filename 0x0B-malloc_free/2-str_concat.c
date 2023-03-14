@@ -27,7 +27,7 @@ else
 
 for (j = 0; s2[j]; j++)
 
-k = (i + j );
+k = (i + j);
 s = malloc(k *sizeof(char) + 1);
 if (s == NULL)
 {
