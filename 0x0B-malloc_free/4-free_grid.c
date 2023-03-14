@@ -14,8 +14,6 @@ if (grid == NULL || height <= 0)
 return;
 }
 for (i = 0; i < height; i++)
-{
 free(grid[i]);
 free(grid);
-}
 }
