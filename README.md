@@ -1,4 +1,4 @@
-Low-Level Programming in C
+**Low-Level Programming in C**
 
 C is a powerful and widely-used programming language that is popular for low-level programming tasks such as system
 programming, device drivers, and embedded systems.
@@ -6,10 +6,10 @@ programming, device drivers, and embedded systems.
 Low-level programming in C involves working with the computer's hardware directly, without the aid of high-level
 abstractions or libraries. Some key concepts in low-level programming in C include:
 
-    Variables: C requires explicit declaration of variables and their types before they can be used. This is important
+    **Variables**: C requires explicit declaration of variables and their types before they can be used. This is important
     for low-level programming tasks, as it ensures that memory is allocated and accessed correctly.
     
-    Pointers and Memory Management: C provides direct access to memory and allows for fine-grained control over how
+    **Pointers and Memory Management:** C provides direct access to memory and allows for fine-grained control over how
     memory is allocated and used. Pointers are used extensively in low-level programming tasks to manipulate memory
     addresses and perform other low-level operations.
     
