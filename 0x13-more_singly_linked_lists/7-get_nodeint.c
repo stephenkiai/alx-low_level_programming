@@ -14,4 +14,3 @@ head = head->next;
 }
 return (i == index ? head : NULL);
 }
-  
