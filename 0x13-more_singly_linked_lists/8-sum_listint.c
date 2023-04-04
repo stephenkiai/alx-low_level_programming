@@ -14,5 +14,5 @@ while (head)
 sum += head->n;
 head = head->next;
 }
-return sum;
+return (sum);
 }
