@@ -9,7 +9,8 @@
  */
 int get_endianness(void)
 {
-union {
+union
+{
 int i;
 char c[sizeof(int)];   /* Array of 4 characters (1 byte each) */
 } u = {1};            /* Initialize to 1 to set the first byte to 1 */
