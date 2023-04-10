@@ -12,5 +12,5 @@ if (index >= sizeof(unsigned long int) * 8)
 return (-1);
 }
 /*return the value of the bit at the index*/
- return ((n & (1UL << index)) != 0);
+return ((n & (1UL << index)) != 0);
 }
