@@ -1,22 +1,5 @@
 #include "main.h"
 /**
- * print_error - Prints an error message to standard error.
- * @message: The error message to print.
- */
-void print_error(char *message)
-{
-dprintf(STDERR_FILENO, "Error: %s\n", message);
-}
-
-/**
- * print_usage - Prints the usage message to standard error.
- */
-void print_usage(void)
-{
-dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-}
-
-/**
  * main - Copies the contents of one file to another file.
  * @argc: The number of arguments passed to the program.
  * @argv: An array of pointers to the arguments.
@@ -28,7 +11,7 @@ int fd_from, fd_to, read_count, write_count;
 char buffer[BUFFER_SIZE];
 if (argc != 3)
 {
-print_usage(void);
+print_usage();
 exit(97);
 }
 fd_from = open(argv[1], O_RDONLY);
