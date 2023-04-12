@@ -13,21 +13,7 @@
 #include <stdio.h>
 #include <errno.h>
 
-/**
- * print_error - Prints an error message to standard error.
- * @message: The error message to print.
- */
-void print_error(char *message)
-{
-dprintf(STDERR_FILENO, "Error: %s\n", message);
-}
-/**
- * print_usage - Prints the usage message to standard error.
- */
-void print_usage(void)
-{
-dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-}
+
 /*prototypes*/
 int _putchar(char);
 ssize_t read_textfile(const char *filename, size_t letters);
