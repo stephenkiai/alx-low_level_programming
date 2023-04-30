@@ -9,9 +9,9 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-if (array && action)
-while  (size--)
-{
-action(*(array++));
-}
+	if (array && action)
+		while  (size--)
+		{
+			action(*(array++));
+		}
 }

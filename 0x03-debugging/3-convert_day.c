@@ -10,43 +10,43 @@
 
 int convert_day(int month, int day)
 {
-    switch (month)
-    {
+	switch (month)
+	{
         case 2:
-            day = 31 + day;
-            break;
+		day = 31 + day;
+		break;
         case 3:
-            day = 59 + day;
-            break;
+		day = 59 + day;
+		break;
         case 4:
-            day = 90 + day;
-            break;
+		day = 90 + day;
+		break;
         case 5:
-            day = 120 + day;
-            break;
+		day = 120 + day;
+		break;
         case 6:
-            day = 151 + day;
-            break;
+		day = 151 + day;
+		break;
         case 7:
-            day = 181 + day;
-            break;
+		day = 181 + day;
+		break;
         case 8:
-            day = 212 + day;
-            break;
+		day = 212 + day;
+		break;
         case 9:
-            day = 243 + day;
-            break;
+		day = 243 + day;
+		break;
         case 10:
-            day = 273 + day;
-            break;
+		day = 273 + day;
+		break;
         case 11:
-            day = 304 + day;
-            break;
+		day = 304 + day;
+		break;
         case 12:
-            day = 334 + day;
-            break;
+		day = 334 + day;
+		break;
         default:
-            break;
+		break;
     }
     return (day);
 }

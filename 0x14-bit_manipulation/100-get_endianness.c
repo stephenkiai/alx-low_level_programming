@@ -9,12 +9,12 @@
  */
 int get_endianness(void)
 {
-union
-{
-int i;
-char c[sizeof(int)];   /* Array of 4 characters (1 byte each) */
-} u = {1};            /* Initialize to 1 to set the first byte to 1 */
+	union
+	{
+		int i;
+		char c[sizeof(int)];   /* Array of 4 characters (1 byte each) */
+	} u = {1};            /* Initialize to 1 to set the first byte to 1 */
 
 /* Check the first byte of the integer in the union */
-return (u.c[0] == 1);
+	return (u.c[0] == 1);
 }

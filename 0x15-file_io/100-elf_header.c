@@ -10,8 +10,8 @@
  */
 void print_error(char* message)
 {
-fprintf(stderr, "Error: %s\n", message);
-exit(98);
+	fprintf(stderr, "Error: %s\n", message);
+	exit(98);
 }
 
 /**
@@ -23,21 +23,21 @@ exit(98);
  */
 void print_header_info(Elf64_Ehdr *ehdr)
 {
-int i;
-printf("ELF Header:\n");
-printf("  Magic:   ");
-for (i = 0; i < EI_NIDENT; i++)
-{
-printf("%02x ", ehdr->e_ident[i]);
-}
-printf("\n");
-printf("  Class:                             %s\n", ehdr->e_ident[EI_CLASS] == ELFCLASS64 ? "ELF64" : "Invalid class");
-printf("  Data:                              %s\n", ehdr->e_ident[EI_DATA] == ELFDATA2LSB ? "2's complement, little endian" : "Invalid data encoding");
-printf("  Version:                           %d (current)\n", ehdr->e_ident[EI_VERSION]);
-printf("  OS/ABI:                            %s\n", ehdr->e_ident[EI_OSABI] == 0 ? "UNIX System V ABI" : "Other ABI");
-printf("  ABI Version:                       %d\n", ehdr->e_ident[EI_ABIVERSION]);
-printf("  Type:                              %s\n", ehdr->e_type == ET_EXEC ? "EXEC (Executable file)" : ehdr->e_type == ET_DYN ? "DYN (Shared object file)" : "Invalid type");
-printf("  Entry point address:               %lx\n", ehdr->e_entry);
+	int i;
+	printf("ELF Header:\n");
+	printf("  Magic:   ");
+	for (i = 0; i < EI_NIDENT; i++)
+	{
+		printf("%02x ", ehdr->e_ident[i]);
+	}
+	printf("\n");
+	printf("  Class:                             %s\n", ehdr->e_ident[EI_CLASS] == ELFCLASS64 ? "ELF64" : "Invalid class");
+	printf("  Data:                              %s\n", ehdr->e_ident[EI_DATA] == ELFDATA2LSB ? "2's complement, little endian" : "Invalid data encoding");
+	printf("  Version:                           %d (current)\n", ehdr->e_ident[EI_VERSION]);
+	printf("  OS/ABI:                            %s\n", ehdr->e_ident[EI_OSABI] == 0 ? "UNIX System V ABI" : "Other ABI");
+	printf("  ABI Version:                       %d\n", ehdr->e_ident[EI_ABIVERSION]);
+	printf("  Type:                              %s\n", ehdr->e_type == ET_EXEC ? "EXEC (Executable file)" : ehdr->e_type == ET_DYN ? "DYN (Shared object file)" : "Invalid type");
+	printf("  Entry point address:               %lx\n", ehdr->e_entry);
 }
 
 /**
@@ -51,10 +51,10 @@ printf("  Entry point address:               %lx\n", ehdr->e_entry);
  */
 void check_elf(unsigned char *e_ident)
 {
-if (memcmp(e_ident, ELFMAG, SELFMAG) != 0)
-{
-print_error("File is not an ELF file");
-}
+	if (memcmp(e_ident, ELFMAG, SELFMAG) != 0)
+	{
+		print_error("File is not an ELF file");
+	}
 }
 /**
  * main - Reads and displays the information contained in the ELF header
@@ -65,26 +65,26 @@ print_error("File is not an ELF file");
  */
 int main(int argc, char *argv[])
 {
-int fd;
-Elf64_Ehdr ehdr;
-ssize_t num_bytes_read;
-if (argc != 2)
-{
-print_error("Incorrect number of arguments");
-}
-fd = open(argv[1], O_RDONLY);
-if (fd == -1)
-{
-print_error("Unable to open file");
-}
-    
-num_bytes_read = read(fd, &ehdr, sizeof(Elf64_Ehdr));
-if (num_bytes_read != sizeof(Elf64_Ehdr))
-{
-print_error("Unable to read ELF header");
-}
-check_elf(ehdr.e_ident);
-print_header_info(&ehdr);
-close(fd);
-return (0);
+	int fd;
+	Elf64_Ehdr ehdr;
+	ssize_t num_bytes_read;
+	if (argc != 2)
+	{
+		print_error("Incorrect number of arguments");
+	}
+	fd = open(argv[1], O_RDONLY);
+	if (fd == -1)
+	{
+		print_error("Unable to open file");
+	}
+
+	num_bytes_read = read(fd, &ehdr, sizeof(Elf64_Ehdr));
+	if (num_bytes_read != sizeof(Elf64_Ehdr))
+	{
+		print_error("Unable to read ELF header");
+	}
+	check_elf(ehdr.e_ident);
+	print_header_info(&ehdr);
+	close(fd);
+	return (0);
 }
